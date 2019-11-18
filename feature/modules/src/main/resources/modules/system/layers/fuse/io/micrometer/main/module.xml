@@ -7,7 +7,7 @@
     <artifact name="${io.micrometer:micrometer-core}" />
   </resources>
   <dependencies>
-    <module name="org.hdrhistogram" />
+    <module name="org.hdrhistogram" slot="fuse" />
     <module name="org.latencyutils" />
   </dependencies>
   <exports>

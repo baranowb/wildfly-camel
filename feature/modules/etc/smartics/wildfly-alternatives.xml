@@ -200,6 +200,13 @@
         <include artifact=":commons-collections" />
     </module>
 
+    <module name="org.apache.commons.configuration" inherit-slot="false" slot="fuse">
+        <properties>
+            <property name="jboss.api" value="private"/>
+        </properties>
+        <include artifact=":commons-configuration" />
+    </module>
+
     <module name="org.apache.commons.io" inherit-slot="false" slot="fuse">
         <properties>
             <property name="jboss.api" value="private"/>
@@ -306,6 +313,13 @@
         <include artifact="org.apache.velocity:velocity" />
     </module>
 
+    <module name="org.bitbucket.jose4j" inherit-slot="false" slot="fuse">
+        <properties>
+            <property name="jboss.api" value="private"/>
+        </properties>
+        <include artifact="org.bitbucket.b_c:jose4j" />
+    </module>
+
     <module name="org.codehaus.jackson.jackson-core-asl" inherit-slot="false" slot="fuse">
         <properties>
             <property name="jboss.api" value="private"/>
@@ -348,6 +362,13 @@
             <property name="jboss.api" value="private"/>
         </properties>
         <include artifact="org.eclipse.jgit:org.eclipse.jgit" />
+    </module>
+
+    <module name="org.hdrhistogram" inherit-slot="false" slot="fuse">
+        <properties>
+            <property name="jboss.api" value="private"/>
+        </properties>
+        <include artifact="org.hdrhistogram:HdrHistogram" />
     </module>
 
     <module name="org.jaxen" inherit-slot="false" slot="fuse">

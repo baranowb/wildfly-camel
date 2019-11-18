@@ -114,7 +114,7 @@
         </apply-to-dependencies>
         <dependencies>
             <module name="com.google.protobuf" slot="2.5" />
-            <module name="org.apache.commons.configuration" />
+            <module name="org.apache.commons.configuration" slot="fuse"/>
             <module name="org.apache.commons.net" />
             <module name="ibm.jdk.ext" />
             <module name="javax.api" />

@@ -46,6 +46,13 @@
             <groupId>org.arquillian.cube</groupId>
             <artifactId>arquillian-cube-requirement</artifactId>
         </dependency>
+        
+        <!-- [#2948] Cannot run docker tests on WildFly-19.x -->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.18</version>
+        </dependency>
 
         <dependency>
             <groupId>org.wildfly.camel</groupId>

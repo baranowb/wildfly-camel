@@ -16,7 +16,7 @@
     <module name="com.fasterxml.jackson.module.afterburner" />
     <module name="com.netflix.archaius.archaius-core" />
     <module name="javax.servlet.api" />
-    <module name="org.hdrhistogram" />
+    <module name="org.hdrhistogram" slot="fuse" />
     <module name="org.slf4j" />
   </dependencies>
 </module>

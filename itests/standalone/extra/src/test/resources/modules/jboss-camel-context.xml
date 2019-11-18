@@ -25,7 +25,7 @@
        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
     <camelContext id="spring-context" xmlns="http://camel.apache.org/schema/spring">
-        <propertyPlaceholder id="props" location="classpath:/psetA.properties,classpath:/psetB.properties"/>
+        <propertyPlaceholder id="props" location="classpath:psetA.properties,classpath:psetB.properties"/>
         <route>
             <from uri="direct:start" />
             <transform>

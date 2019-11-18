@@ -208,8 +208,8 @@
                                         <security-domain name="hawtio-domain"]]></replacevalue>
                                     </replacefilter>
                                     <replacefilter>
-                                        <replacetoken><![CDATA[<subsystem xmlns="urn:jboss:domain:ee:4.0">]]></replacetoken>
-                                        <replacevalue><![CDATA[<subsystem xmlns="urn:jboss:domain:ee:4.0">
+                                        <replacetoken><![CDATA[<subsystem xmlns="urn:jboss:domain:ee:5.0">]]></replacetoken>
+                                        <replacevalue><![CDATA[<subsystem xmlns="urn:jboss:domain:ee:5.0">
                                         <global-modules>
                                             <module name="org.wildfly.camel.global.ee" />
                                         </global-modules>]]></replacevalue>
