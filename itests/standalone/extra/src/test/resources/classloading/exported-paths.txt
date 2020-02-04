@@ -6,6 +6,7 @@ META-INF/services/org/apache/camel
 META-INF/services/org/apache/camel/cloud
 META-INF/services/org/apache/camel/component
 META-INF/services/org/apache/camel/configurer
+META-INF/services/org/apache/camel/cron
 META-INF/services/org/apache/camel/language
 META-INF/services/org/apache/camel/model
 META-INF/services/org/apache/camel/send-dynamic
@@ -25,6 +26,7 @@ org/apache/camel/catalog/components
 org/apache/camel/catalog/dataformats
 org/apache/camel/catalog/docs
 org/apache/camel/catalog/languages
+org/apache/camel/catalog/main
 org/apache/camel/catalog/models
 org/apache/camel/catalog/others
 org/apache/camel/catalog/schemas
@@ -35,6 +37,7 @@ org/apache/camel/component/bean
 org/apache/camel/component/beanclass
 org/apache/camel/component/browse
 org/apache/camel/component/controlbus
+org/apache/camel/component/cron
 org/apache/camel/component/dataformat
 org/apache/camel/component/dataset
 org/apache/camel/component/direct
@@ -144,6 +147,8 @@ org/apache/camel/support/processor/idempotent
 org/apache/camel/support/processor/validation
 org/apache/camel/support/service
 org/apache/camel/throttling
+org/apache/camel/tooling
+org/apache/camel/tooling/model
 org/apache/camel/util
 org/apache/camel/util/backoff
 org/apache/camel/util/concurrent
@@ -151,6 +156,8 @@ org/apache/camel/util/function
 org/apache/camel/util/json
 org/apache/camel/util/spring
 org/apache/camel/util/xml
+org/apache/camel/xml
+org/apache/camel/xml/jaxb
 org/springframework
 org/springframework/aop
 org/springframework/aop/aspectj
@@ -336,6 +343,7 @@ META-INF/services/org/apache/camel
 META-INF/services/org/apache/camel/cloud
 META-INF/services/org/apache/camel/component
 META-INF/services/org/apache/camel/configurer
+META-INF/services/org/apache/camel/cron
 META-INF/services/org/apache/camel/dataformat
 META-INF/services/org/apache/camel/ha
 META-INF/services/org/apache/camel/language
@@ -577,6 +585,7 @@ com/amazonaws/services/sqs/model
 com/amazonaws/services/sqs/model/transform
 com/amazonaws/transform
 com/amazonaws/util
+com/amazonaws/util/endpoint
 com/amazonaws/util/json
 com/amazonaws/waiters
 com/bazaarvoice
@@ -635,15 +644,18 @@ com/dropbox/core/stone
 com/dropbox/core/util
 com/dropbox/core/v1
 com/dropbox/core/v2
+com/dropbox/core/v2/account
 com/dropbox/core/v2/async
 com/dropbox/core/v2/auth
 com/dropbox/core/v2/callbacks
+com/dropbox/core/v2/check
 com/dropbox/core/v2/common
 com/dropbox/core/v2/contacts
 com/dropbox/core/v2/fileproperties
 com/dropbox/core/v2/filerequests
 com/dropbox/core/v2/files
 com/dropbox/core/v2/paper
+com/dropbox/core/v2/secondaryemails
 com/dropbox/core/v2/seenstate
 com/dropbox/core/v2/sharing
 com/dropbox/core/v2/team
@@ -933,6 +945,7 @@ com/hazelcast/projection/impl
 com/hazelcast/query
 com/hazelcast/query/extractor
 com/hazelcast/query/impl
+com/hazelcast/query/impl/bitmap
 com/hazelcast/query/impl/getters
 com/hazelcast/query/impl/predicates
 com/hazelcast/quorum
@@ -1319,8 +1332,13 @@ io/fabric8/kubernetes/api/model/authentication
 io/fabric8/kubernetes/api/model/authorization
 io/fabric8/kubernetes/api/model/batch
 io/fabric8/kubernetes/api/model/certificates
+io/fabric8/kubernetes/api/model/coordination
+io/fabric8/kubernetes/api/model/coordination/v1beta1
+io/fabric8/kubernetes/api/model/discovery
 io/fabric8/kubernetes/api/model/events
 io/fabric8/kubernetes/api/model/extensions
+io/fabric8/kubernetes/api/model/metrics
+io/fabric8/kubernetes/api/model/metrics/v1beta1
 io/fabric8/kubernetes/api/model/networking
 io/fabric8/kubernetes/api/model/policy
 io/fabric8/kubernetes/api/model/rbac
@@ -1328,6 +1346,8 @@ io/fabric8/kubernetes/api/model/runtime
 io/fabric8/kubernetes/api/model/scheduling
 io/fabric8/kubernetes/api/model/settings
 io/fabric8/kubernetes/api/model/storage
+io/fabric8/kubernetes/api/model/storage/v1beta1
+io/fabric8/kubernetes/api/model/v1
 io/fabric8/kubernetes/api/model/version
 io/fabric8/kubernetes/client
 io/fabric8/kubernetes/client/dsl
@@ -2026,6 +2046,7 @@ org/apache/camel/component/pgevent
 org/apache/camel/component/printer
 org/apache/camel/component/pubnub
 org/apache/camel/component/quartz
+org/apache/camel/component/quartz/cron
 org/apache/camel/component/quickfixj
 org/apache/camel/component/quickfixj/converter
 org/apache/camel/component/rabbitmq
@@ -2219,8 +2240,9 @@ org/apache/camel/dataformat/xmlsecurity
 org/apache/camel/dataformat/xstream
 org/apache/camel/dataformat/zipfile
 org/apache/camel/http
+org/apache/camel/http/base
+org/apache/camel/http/base/cookie
 org/apache/camel/http/common
-org/apache/camel/http/common/cookie
 org/apache/camel/jsonpath
 org/apache/camel/jsonpath/easypredicate
 org/apache/camel/jsonpath/jackson
@@ -3205,6 +3227,7 @@ org/apache/kafka/common/network
 org/apache/kafka/common/protocol
 org/apache/kafka/common/protocol/types
 org/apache/kafka/common/record
+org/apache/kafka/common/replica
 org/apache/kafka/common/requests
 org/apache/kafka/common/resource
 org/apache/kafka/common/security
@@ -3220,6 +3243,7 @@ org/apache/kafka/common/security/token/delegation
 org/apache/kafka/common/serialization
 org/apache/kafka/common/utils
 org/apache/kafka/server
+org/apache/kafka/server/authorizer
 org/apache/kafka/server/policy
 org/apache/kafka/server/quota
 org/apache/lucene
@@ -3647,6 +3671,7 @@ org/apache/tika/parser/txt
 org/apache/tika/parser/utils
 org/apache/tika/parser/video
 org/apache/tika/parser/wordperfect
+org/apache/tika/parser/xliff
 org/apache/tika/parser/xml
 org/apache/tika/sax
 org/apache/tika/sax/xpath
@@ -4837,6 +4862,7 @@ org/optaplanner/core/api/score/constraint
 org/optaplanner/core/api/score/holder
 org/optaplanner/core/api/score/stream
 org/optaplanner/core/api/score/stream/bi
+org/optaplanner/core/api/score/stream/quad
 org/optaplanner/core/api/score/stream/tri
 org/optaplanner/core/api/score/stream/uni
 org/optaplanner/core/api/solver
@@ -5009,6 +5035,7 @@ org/springframework/batch/core/jsr/step/item
 org/springframework/batch/core/launch
 org/springframework/batch/core/launch/support
 org/springframework/batch/core/listener
+org/springframework/batch/core/metrics
 org/springframework/batch/core/migration
 org/springframework/batch/core/migration/2.2
 org/springframework/batch/core/migration/4.1
@@ -5031,6 +5058,8 @@ org/springframework/batch/item
 org/springframework/batch/item/adapter
 org/springframework/batch/item/amqp
 org/springframework/batch/item/amqp/builder
+org/springframework/batch/item/avro
+org/springframework/batch/item/avro/builder
 org/springframework/batch/item/data
 org/springframework/batch/item/data/builder
 org/springframework/batch/item/database
@@ -5047,6 +5076,8 @@ org/springframework/batch/item/jms
 org/springframework/batch/item/jms/builder
 org/springframework/batch/item/json
 org/springframework/batch/item/json/builder
+org/springframework/batch/item/kafka
+org/springframework/batch/item/kafka/builder
 org/springframework/batch/item/ldif
 org/springframework/batch/item/ldif/builder
 org/springframework/batch/item/mail

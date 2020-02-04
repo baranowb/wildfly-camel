@@ -33,6 +33,7 @@
     <artifact name="${org.apache.camel:camel-util-json}" />
     <artifact name="${org.apache.camel:camel-validator}" />
     <artifact name="${org.apache.camel:camel-vm}" />
+    <artifact name="${org.apache.camel:camel-xml-jaxb}" />
     <artifact name="${org.apache.camel:camel-xpath}" />
     <artifact name="${org.apache.camel:camel-xslt}" />
     <artifact name="${org.apache.camel:spi-annotations}" />
@@ -45,6 +46,7 @@
     <module name="org.slf4j" />
     <module name="sun.jdk" />
     <module name="com.sun.javax.activation" />
+    <module name="org.apache.camel.component.headersmap" />
   </dependencies>
   <exports>
     <exclude path="org/apache/camel/impl/osgi**" />

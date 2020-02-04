@@ -51,7 +51,7 @@ couchbase
 couchdb
 cql
 crypto
-crypto-cms
+crypto-cms                                          #deprecated
 cxf
 cxfrs
 dataformat
@@ -276,12 +276,20 @@ aws-lambda
 aws-mq
 aws-msk
 aws-translate
+aws2-ecs
+aws2-eks
+aws2-kms
+aws2-mq
+aws2-msk
+aws2-translate
 chatscript
 corda
+cron
 debezium-mongodb
 debezium-mysql
 debezium-postgres
 debezium-sqlserver
+elytron
 file-watch
 google-sheets
 google-sheets-stream
@@ -289,16 +297,20 @@ graphql
 iota
 jgroups-raft
 jooq
+jslt
 kudu
 nitrite
 pg-replication-slot
 platform-http
 pulsar
+rest-openapi
 robotframework
 service
 soroush
 web3j
 websocket-jsr356
+weka
+workday
 xj
 
 [rejected]
